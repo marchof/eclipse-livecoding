@@ -9,15 +9,27 @@
       </category>
       <command
             categoryId="org.jacoco.tools.eclipse.lifecoding"
-            defaultHandler="org.jacoco.tools.eclipse.lifecoding.PrintCurrentRepoHandler"
-            id="org.jacoco.tools.eclipse.lifecoding.test"
-            name="Test">
+            defaultHandler="org.jacoco.tools.eclipse.lifecoding.MoveToNextTagHandler"
+            id="org.jacoco.tools.eclipse.lifecoding.nextTag"
+            name="Move to Next Tag">
+      </command>
+      <command
+            categoryId="org.jacoco.tools.eclipse.lifecoding"
+            defaultHandler="org.jacoco.tools.eclipse.lifecoding.MoveToPreviousTagHandler"
+            id="org.jacoco.tools.eclipse.lifecoding.previousTag"
+            name="Move to Previous Tag">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="org.jacoco.tools.eclipse.lifecoding.test"
+            commandId="org.jacoco.tools.eclipse.lifecoding.nextTag"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+.">
+      </key>
+      <key
+            commandId="org.jacoco.tools.eclipse.lifecoding.previousTag"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+M3+,">
