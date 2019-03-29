@@ -35,5 +35,18 @@
             sequence="M1+M3+,">
       </key>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.trim.status?after=additions">
+         <toolbar
+               id="org.jacoco.tools.eclipse.lifecoding.statusbar">
+            <control
+                  class="org.jacoco.tools.eclipse.lifecoding.CurrentCommitStatusLine">
+            </control>
+         </toolbar>
+      </menuContribution>
+   </extension>
 
 </plugin>
