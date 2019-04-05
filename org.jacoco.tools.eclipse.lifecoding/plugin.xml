@@ -47,6 +47,16 @@
             </control>
          </toolbar>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.trim.status?after=additions">
+         <toolbar
+               id="org.jacoco.tools.eclipse.lifecoding.statusbar">
+            <control
+                  class="org.jacoco.tools.eclipse.lifecoding.TimeStatusLine">
+            </control>
+         </toolbar>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.perspectives">
