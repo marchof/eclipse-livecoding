@@ -45,8 +45,10 @@ public class TimeStatusLine extends WorkbenchWindowControlContribution {
 	}
 
 	public void update() {
-		Duration elapsed = Duration.between(start, Instant.now());
-		label.setText(String.format("%02d", elapsed.toMinutes()));
+		if (!label.isDisposed()) {
+			Duration elapsed = Duration.between(start, Instant.now());
+			label.setText(String.format("%02d", elapsed.toMinutes()));
+		}
 	}
 
 }
